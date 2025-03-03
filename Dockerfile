@@ -5,6 +5,6 @@ RUN mvn clean package
 FROM openjdk:8-jre-alpine
 COPY --from=build target/springwebflux-video-streaming-0.0.1-SNAPSHOT.jar .
 COPY --from=build target/classes/videos/javatechie.mp4 ./video/
-EXPOSE 80
+EXPOSE 8080
 
 CMD ["java","-jar","springwebflux-video-streaming-0.0.1-SNAPSHOT.jar"]
