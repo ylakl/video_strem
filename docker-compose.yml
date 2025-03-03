@@ -1,0 +1,9 @@
+services:
+  video:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./video:/tmp/content
+    ports:
+      - 80:80
